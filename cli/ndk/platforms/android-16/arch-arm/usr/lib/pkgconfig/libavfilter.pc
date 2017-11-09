@@ -1,0 +1,14 @@
+prefix=/Users/koroff/Downloads/ffmpeg-android-cli/ndk/platforms/android-16/arch-arm/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.31.100
+Requires: libswscale >= 4.0.100, libswresample >= 2.0.101, libavutil >= 55.17.103
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -lm -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
